@@ -72,6 +72,19 @@ npm run test
 - **API Version 1**: `http://localhost:3000/api/v1`
 - **Interactive Documentation (Swagger)**: `http://localhost:3000/api/docs`
 
+## Test Card Numbers
+
+You can use the following numbers to test the API's validation logic:
+
+| Status | Card Type | Card Number |
+| :--- | :--- | :--- |
+| **Valid** | Visa | `4242424242424242` |
+| **Valid** | Mastercard | `5105105105105100` |
+| **Valid** | Discover | `6011111111111117` |
+| **Valid** | Amex | `378282246310005` |
+| **Invalid** | Any | `4242424242424241` (Fails Luhn) |
+| **Invalid** | Too Short | `12345678901` (Less than 12 digits) |
+
 ## API Documentation
 
 ### Validate Card Number
