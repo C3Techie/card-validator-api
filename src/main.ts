@@ -7,8 +7,10 @@ import { ResponseTransformInterceptor } from './common/interceptors/response-tra
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
-  // Set global prefix
-  app.setGlobalPrefix('api/v1');
+  // Set global prefix with exclusions for root and docs
+  app.setGlobalPrefix('api/v1', {
+    exclude: ['/', 'api/docs', 'api/docs/(.*)'],
+  });
 
   // Use global pipes for validation
   app.useGlobalPipes(
