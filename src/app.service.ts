@@ -1,8 +1,9 @@
 import { Injectable } from '@nestjs/common';
+import { SYSTEM_MESSAGES } from './constants/system.messages';
 
 @Injectable()
 export class AppService {
   getHello(): string {
-    return 'Welcome to the Card Validator API. Use /api/v1/validate-card to validate card numbers.';
+    return SYSTEM_MESSAGES.CARD.WELCOME;
   }
 }
