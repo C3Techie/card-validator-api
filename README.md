@@ -66,6 +66,12 @@ npm run start:prod
 npm run test
 ```
 
+## API Base URLs
+
+- **API Root**: `http://localhost:3000`
+- **API Version 1**: `http://localhost:3000/api/v1`
+- **Interactive Documentation (Swagger)**: `http://localhost:3000/api/docs`
+
 ## API Documentation
 
 ### Validate Card Number
